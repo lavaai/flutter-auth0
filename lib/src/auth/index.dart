@@ -206,7 +206,7 @@ class Auth0Auth {
     assert(params['token'] != null);
     var _client = new Auth0Client(this.client.baseUrl,
         telemetry: this.client.telemetry, token: params['token']);
-    return _client.query('/userinfo').then(responseHandler);
+    return _client.query('/userinfo').then(responseDataHandler);
   }
 
   //
